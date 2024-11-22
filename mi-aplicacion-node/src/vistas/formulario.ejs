@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <title>PARRILLON VALLUNO</title>
+</head>
+<body>
+    <h1>Reverva</h1>
+    <form action="/enviar-correo" method="POST">
+        <label for="nombre_completo">Nombre Completo:</label>
+        <input type="text" id="nombre_completo" name="nombre_completo" required>
+
+        <label for="cedula">Cédula:</label>
+        <input type="text" id="cedula" name="cedula" required>
+
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+        <label for="fecha_nacimiento">Correo:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="dia_reserva">Día de Reserva:</label>
+        <input type="date" id="dia_reserva" name="dia_reserva" required>
+
+        <label for="numero_personas">Número de Personas:</label>
+        <input type="number" id="numero_personas" name="numero_personas" min="1" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <!-- Categorías y Opciones -->
+        <fieldset>
+            <legend>Entradas</legend>
+            <label><input type="checkbox" name="menu[]" value="Porción de Maduro - 5000"> Porción de Maduro - $5.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Porción de Arepa - 5000"> Porción de Arepa - $5.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Porción de Arroz - 5000"> Porción de Arroz - $5.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Porción de Papa a la Francesa - 8000"> Porción de Papa a la Francesa - $8.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Consomé Especial - 8000"> Consomé Especial - $8.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Tostadas de Plátano con Hogo - 7000"> Tostadas de Plátano con Hogo - $7.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Porción de Chicharrón - 25000"> Porción de Chicharrón - $25.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Porción de Chorizo - 25000"> Porción de Chorizo - $25.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Ceviche de Camarón - 35000"> Ceviche de Camarón - $35.000</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Asados al Carbón</legend>
+            <label><input type="checkbox" name="menu[]" value="Baby Beef - 43000"> Baby Beef - $43.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Churrasco - 39000"> Churrasco - $39.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Punta de Anca - 39000"> Punta de Anca - $39.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Lomo de Cerdo - 38000"> Lomo de Cerdo - $38.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Filete de Pollo - 39000"> Filete de Pollo - $39.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Plato Mixto Don Parrillón - 44000"> Plato Mixto Don Parrillón - $44.000</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Especiales del Parrillón</legend>
+            <label><input type="checkbox" name="menu[]" value="Hueso Porkis - 45000"> Hueso Porkis - $45.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Costilla de Cerdo Especial - 38000"> Costilla de Cerdo Especial - $38.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Picada Especial (4 personas) - 70000"> Picada Especial (4 personas) - $70.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Media Picada (2 personas) - 57000"> Media Picada (2 personas) - $57.000</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Típicos de la Casa</legend>
+            <label><input type="checkbox" name="menu[]" value="Lengua en Salsa Criolla - 42000"> Lengua en Salsa Criolla - $42.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Lengua a la Brasa - 42000"> Lengua a la Brasa - $42.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Sobrebarriga en Salsa Criolla - 42000"> Sobrebarriga en Salsa Criolla - $42.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Chuleta de Res - 43000"> Chuleta de Res - $43.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Chuleta de Pollo - 39000"> Chuleta de Pollo - $39.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Bandeja Paisa - 38000"> Bandeja Paisa - $38.000</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Pescados y Mariscos</legend>
+            <label><input type="checkbox" name="menu[]" value="Trucha a la Marinera - 45000"> Trucha a la Marinera - $45.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Trucha Arco Iris - 39000"> Trucha Arco Iris - $39.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Tilapia Frita - 39000"> Tilapia Frita - $39.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Cazuela de Mariscos - 45000"> Cazuela de Mariscos - $45.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Trucha al Ajillo - 38000"> Trucha al Ajillo - $38.000</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Platos Especiales de Fin de Semana</legend>
+            <label><input type="checkbox" name="menu[]" value="Ajiaco Taza - 14000"> Ajiaco (Taza) - $14.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Mondongo Taza - 14000"> Mondongo (Taza) - $14.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Sancocho de Tres Carnes - 40000"> Sancocho de Tres Carnes - $40.000</label><br>
+            <label><input type="checkbox" name="menu[]" value="Sancocho de Gallina - 40000"> Sancocho de Gallina - $40.000</label>
+        </fieldset>
+
+        <label for="observaciones">Observaciones:</label>
+        <textarea id="observaciones" name="observaciones"></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
+<div id="responseModal" class="modal">
+    <div class="modal-content">
+        <p id="modalMessage"></p>
+        <button class="modal-button" onclick="closeModal()">Aceptar</button>
+    </div>
+</div>

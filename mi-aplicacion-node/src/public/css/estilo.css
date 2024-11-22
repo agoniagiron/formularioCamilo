@@ -1,0 +1,280 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('/img/fondo.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #c0392b;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    color: #34495e;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+fieldset {
+    border: 2px solid #e74c3c;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+legend {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 1.2em;
+}
+
+button[type="submit"] {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #c0392b;
+}
+
+/* Detalles adicionales para mejorar la experiencia */
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #e67e22;
+    box-shadow: 0 0 10px rgba(230, 126, 34, 0.5);
+}
+
+fieldset label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.modal-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Estilos para mejorar la visualización en pantallas pequeñas */
+/* @media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+} */
+
+/* Iconos y detalles decorativos opcionales */
+legend::before {
+    content: '\1F373';
+    margin-right: 5px;
+}
+
+button[type="submit"]::after {
+    content: '\1F357';
+    margin-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    form {
+        width: 95%;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    label {
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="number"],
+    textarea {
+        width: 91%;
+        padding: 12px;
+        margin-bottom: 15px;
+        font-size: 16px; /* Prevents iOS zoom on focus */
+    }
+
+    fieldset {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    legend {
+        font-size: 1.2em;
+        padding: 0 10px;
+    }
+
+    /* Make checkboxes more touch-friendly */
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    input[type="checkbox"] + label {
+        display: inline-block;
+        padding: 10px 0;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.1em;
+        margin-top: 20px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    fieldset label {
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 30% auto;
+        padding: 15px;
+    }
+}
+
+form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+form::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    z-index: -1;
+    border-radius: inherit;
+}
+
+/* Add this to ensure form contents stay above the overlay */
+form > * {
+    position: relative;
+    z-index: 1;
+}

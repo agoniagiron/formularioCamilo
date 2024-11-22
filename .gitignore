@@ -1,2 +1,9 @@
-echo "node_modules/" > .gitignore
-echo ".env" >> .gitignore
+# Dependencias de Node.js
+node_modules/
+
+# Archivos de configuración
+.env
+
+# Archivos del sistema
+.DS_Store
+.vscode/
